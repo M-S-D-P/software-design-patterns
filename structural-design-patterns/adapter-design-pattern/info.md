@@ -1,0 +1,3 @@
+# Adapter Design Pattern
+
+The Adapter design pattern is a structural pattern that allows incompatible interfaces to work together. It acts as a bridge between two incompatible interfaces by converting the interface of one class into another interface that a client expects. This pattern is useful when you have legacy code or third-party libraries with interfaces that don't match the ones you need to work with.
