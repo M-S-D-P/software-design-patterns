@@ -20,8 +20,6 @@ class ModernPrinter
   end
 end
 
-
-
 # Adapter class to make LegacyPrinter compatible with ModernPrinter interface
 class PrinterAdapter
   def initialize(legacy_printer)
@@ -33,13 +31,16 @@ class PrinterAdapter
   end
 end
 
+# Client code expecting ModernPrinter interface
+def client_code(printer)
+  printer.print
+end
 
-
-
-# No modifications to client code and we can use Adapter directly as follows
-
+# Using ModernPrinter directly
+modern_printer = ModernPrinter.new("Hello from the modern printer!")
+client_code(modern_printer) # Output: Modern Printer: Hello from the modern printer!
 
 # Using LegacyPrinter with Adapter
-legacy_printer = LegacyPrinter.new("Hello, world!")
+legacy_printer = LegacyPrinter.new("Hello from the legacy printer!")
 adapter = PrinterAdapter.new(legacy_printer)
-client_code(adapter) # Output: Legacy Printer: Hello, world!
+client_code(adapter) # Output: Legacy Printer: Hello from the legacy printer!

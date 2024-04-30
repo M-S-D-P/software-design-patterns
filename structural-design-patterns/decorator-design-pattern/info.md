@@ -1,0 +1,2 @@
+# Decorator design pattern
+The Decorator pattern is used to dynamically add or alter the behavior of objects at runtime without affecting the behavior of other objects of the same class. It is particularly useful when you need to extend the functionality of individual objects without subclassing.
